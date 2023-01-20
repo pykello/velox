@@ -13,7 +13,7 @@
 # limitations under the License.
 
 add_executable(
-  velox_codegen_vector_function_test CodegenVectorFunctionTest.cpp
+  velox_codegen_vector_function_test 
                                      TempStringTest.cpp VectorReaderTest.cpp)
 add_test(velox_codegen_vector_function_test velox_codegen_vector_function_test)
 

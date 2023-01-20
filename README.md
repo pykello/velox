@@ -115,6 +115,18 @@ $ ./scripts/setup-ubuntu.sh
 $ make
 ```
 
+### Setting up on Ubuntu 18.04
+
+* Install CMake 3.25.1
+* Install clang-11, and set `export CC=clang-11` and `export CXX=clang++-11`.
+* You might need to install `git clone https://github.com/ericniebler/range-v3`.
+* Run the following commands:
+
+```shell
+$ ./scripts/setup-ubuntu.sh 
+$ make
+```
+
 ### Building Velox
 
 Run `make` in the root directory to compile the sources. For development, use
