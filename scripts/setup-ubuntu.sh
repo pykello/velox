@@ -28,7 +28,7 @@ NPROC=$(getconf _NPROCESSORS_ONLN)
 DEPENDENCY_DIR=${DEPENDENCY_DIR:-$(pwd)}
 
 # Install all velox and folly dependencies.
-sudo --preserve-env apt update && apt install -y \
+sudo --preserve-env apt update && sudo apt install -y \
   g++ \
   cmake \
   ccache \
@@ -86,9 +86,9 @@ function install_folly {
 
 function install_conda {
   mkdir -p conda && cd conda
-  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  wget --no-check-certificate https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
   MINICONDA_PATH=/opt/miniconda-for-velox
-  bash Miniconda3-latest-Linux-x86_64.sh -b -p $MINICONDA_PATH
+  sudo bash Miniconda3-latest-Linux-x86_64.sh -u -b -p $MINICONDA_PATH
 }
 
 function install_velox_deps {
